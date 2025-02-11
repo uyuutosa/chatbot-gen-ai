@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  devcontainer:
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+    stdin_open: true # コンソールを維持
+    tty: true # シェルプロンプトを維持
+    environment:
+      - PYTHONUNBUFFERED=1
+      - UV_PREVIEW=1
+    volumes:
+      - ..:/workspace

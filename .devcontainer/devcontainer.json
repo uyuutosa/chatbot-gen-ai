@@ -1,0 +1,25 @@
+{
+  "name": "LangChain FastAPI DevContainer",
+  "dockerComposeFile": "docker-compose.yaml",
+  "service": "devcontainer",
+  "workspaceFolder": "/workspace",
+  "forwardPorts": [50505],
+  //"postCreateCommand": "uv sync",
+  //"remoteUser": "vscode",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "zsh"
+      },
+      "extensions": [
+        "ms-azuretools.vscode-docker",
+        "biomejs.biome",
+        "ms-python.python",
+        "charliermarsh.ruff",
+        "qwtel.sqlite-viewer",
+        "exiasr.hadolint",
+        "GitHub.copilot-chat"
+      ]
+    }
+  }
+}
