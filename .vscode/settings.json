@@ -1,0 +1,22 @@
+{
+  "biome.enable": true,
+  "biome.configPath": "./biome.config.json",
+  "editor.formatOnSave": true,
+  "python.defaultInterpreterPath": "/workspace/.venv/bin/python",
+  "[python]": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit",
+      "source.organizeImports": "explicit"
+    },
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  },
+  "editor.defaultFormatter": "biomejs.biome", // Biome をフォーマッタとして指定
+  "[javascript]": {
+    "editor.defaultFormatter": "biomejs.biome" // JavaScript 用のデフォルトフォーマッタ
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "biomejs.biome" // TypeScript 用のデフォルトフォーマッタ
+  },
+  "ruff.configuration": "./pyproject.toml"
+}

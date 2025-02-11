@@ -1,0 +1,63 @@
+{
+	// Use IntelliSense to learn about possible attributes.
+	// Hover to view descriptions of existing attributes.
+	// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+	"version": "0.1.0",
+	"configurations": [
+		{
+            "name": "FastAPI Debug",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "uvicorn",
+            "args": [
+                "main:app",      // FastAPI のエントリーポイント
+                "--host", "0.0.0.0",
+                "--port", "8000",
+                "--reload"
+            ],
+            "env": {
+                "ENVIRONMENT": "development",
+                "DEBUG": "true",
+                "LOG_LEVEL": "debug"
+            },
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}/backend",
+            "justMyCode": false
+        },
+		{
+			"name": "Vite React App",
+			"type": "node",
+			"request": "launch",
+			"cwd": "${workspaceFolder}/app/frontend",
+			"runtimeExecutable": "npm",
+			"runtimeArgs": ["run", "dev"],
+			"outputCapture": "std",
+			"skipFiles": ["<node_internals>/**"],
+			"env": {
+				"NODE_ENV": "development"
+			},
+			"serverReadyAction": {
+				"action": "startDebugging",
+				"pattern": "http://localhost:(\\d+)",
+				"name": "Chrome: Debug Vite App"
+			}
+		},
+		{
+			"name": "Chrome: Debug Vite App",
+			"type": "chrome",
+			"request": "launch",
+			"url": "http://localhost:5173/",
+			"webRoot": "${workspaceFolder}/app/frontend/",
+			"sourceMaps": true,
+			"sourceMapPathOverrides": {
+				"webpack:///src/*": "${webRoot}/*"
+			}
+		}
+	],
+	"compounds": [
+		{
+			"name": "Front & Back",
+			"configurations": ["Python: Quart", "Vite React App"]
+		}
+	]
+}
