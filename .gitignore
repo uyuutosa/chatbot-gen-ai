@@ -1,0 +1,62 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Dependency directories
+node_modules/
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+dist/
+dist-ssr/
+
+# Editor directories and files
+.vscode/
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Environment variables
+.env
+
+# Python specific
+*.pyc
+*.venv
+*.env
+*.env.*
+.venv/
+.envrc
+.pdm.toml
+__pypackages__/
+
+# TypeScript specific
+*.tsbuildinfo
+*.tsbuildinfo.json
+
+# Docker specific
+docker-compose.override.yml
+
+# SQLite database
+*.db
+
+# Coverage
+coverage/
+*.lcov
+
+# Build directories
+build/
+tmp/
+temp/
+.cache/
+
+# Ignore biome generated files
+**/*.gen.ts
