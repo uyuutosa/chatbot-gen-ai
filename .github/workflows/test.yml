@@ -23,12 +23,9 @@ jobs:
       - name: Build and run test container
         run: docker-compose -f ./docker/docker-compose.yaml up --build -d test
 
-      - name: Run backend tests
+      - name: Run frontend tests
         run: docker compose -f docker/docker-compose.yaml exec test cd frontend && npm run test
 
       - name: Run backend tests
         run: docker compose -f docker/docker-compose.yaml exec test uv run pytest
-
-      - name: Run frontend tests
-        run: docker-compose -f ./docker-compose.yaml exec test npm test
-        working-directory: ./frontend
+        
