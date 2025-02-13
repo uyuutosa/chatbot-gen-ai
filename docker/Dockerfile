@@ -37,4 +37,3 @@ RUN curl https://get.volta.sh | bash
 
 ENV VOLTA_HOME=/vscode/.volta
 ENV PATH=$VOLTA_HOME/bin:$PATH
-

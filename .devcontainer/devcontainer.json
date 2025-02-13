@@ -1,11 +1,9 @@
 {
   "name": "LangChain FastAPI DevContainer",
-  "dockerComposeFile": "docker-compose.yaml",
+  "dockerComposeFile": "docker/docker-compose.yaml",
   "service": "devcontainer",
   "workspaceFolder": "/workspace",
   "forwardPorts": [50505],
-  //"postCreateCommand": "uv sync",
-  //"remoteUser": "vscode",
   "customizations": {
     "vscode": {
       "settings": {
@@ -18,7 +16,8 @@
         "charliermarsh.ruff",
         "qwtel.sqlite-viewer",
         "exiasr.hadolint",
-        "GitHub.copilot-chat"
+        "GitHub.copilot-chat",
+        "github.vscode-github-actions"
       ]
     }
   }
