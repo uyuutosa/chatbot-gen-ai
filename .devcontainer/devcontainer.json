@@ -1,6 +1,6 @@
 {
   "name": "LangChain FastAPI DevContainer",
-  "dockerComposeFile": "docker/docker-compose.yaml",
+  "dockerComposeFile": "../docker/docker-compose.yaml",
   "service": "devcontainer",
   "workspaceFolder": "/workspace",
   "forwardPorts": [50505],

@@ -6,15 +6,17 @@ services:
       context: .
       dockerfile: ./Dockerfile
     volumes:
-      - ../backend:/app
-    command: uvicorn app.main:app --host 0.0.0.0 --port 8000
+      - ..:/workspace
+    stdin_open: true # Keep console open
+    tty: true # Keep shell prompt open
     ports:
       - "8000:8000"
+    working_dir: /workspace  # 追加
 
   devcontainer:
     build:
       context: ..
-      dockerfile: .devcontainer/Dockerfile
+      dockerfile: docker/Dockerfile
     stdin_open: true # Keep console open
     tty: true # Keep shell prompt open
     environment:
